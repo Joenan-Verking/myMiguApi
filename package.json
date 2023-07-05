@@ -9,7 +9,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "start": "npm run build && node bin/www",
-    "build": "rimraf dist && tsc && tsc-alias && node build.js && xcopy /e /i views dist\\views && xcopy /e /i public dist\\public",
+    "build": "rm -rf dist && tsc && tsc-alias && node build.js && xcopy /e /i views dist\\views && xcopy /e /i public dist\\public",
     "test": "node test.js",
     "start:docs": "docsify serve docs",
     "prepublishOnly": "npm run build"
